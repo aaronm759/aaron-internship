@@ -89,7 +89,7 @@ const NewItems = () => {
 
 
 
-  console.log('timers', timers);
+  
   
 
   const requestRef = useRef(null);
@@ -107,7 +107,7 @@ const NewItems = () => {
         const secondsElapsed = Math.floor(accumulatedTimeRef.current / 1000);
 
         if (secondsElapsed >= 1) {
-          console.log('secondsElapsed', secondsElapsed);
+          
           
           setTimers((prevTimers) => {
             

@@ -106,7 +106,7 @@ const ItemCards = (props) => {
             <div className="nft__item" key={item.id ?? index}>
                       <div className="author_list_pp">
                         <Link
-                          to={`/author/${item.authorId}`}
+                          to={`/author?author=${item.authorId}`}
                           data-bs-toggle="tooltip"
                           data-bs-placement="top"
                           title="Creator: Monica Lucas"

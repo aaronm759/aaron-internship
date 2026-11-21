@@ -71,7 +71,7 @@ const HotCollections = () => {
         @media (max-width: 575px) { .hot-collections-slide { flex-basis: 100%; } }
         @media (prefers-reduced-motion: reduce) { .hot-skeleton { animation: none; } .hot-collections-carousel { scroll-behavior: auto; } }
       `}</style>
-      <div className="container">
+      <div className="container" data-aos="fade-up" data-aos-duration="250">
         <div className="text-center">
           <h2>Hot Collections</h2>
           <div className="small-border bg-color-2"></div>

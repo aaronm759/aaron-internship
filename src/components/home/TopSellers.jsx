@@ -27,7 +27,7 @@ const TopSellers = () => {
             </div>
           </div>
           <div className="col-md-12">
-            <ol className="author_list">
+            <ol className="author_list" data-aos="fade" data-aos-duration="250">
               {loading ? new Array(12).fill(0).map((_, index) => (
                 <li key={index} aria-hidden="true">
                   <div className="author_list_pp">

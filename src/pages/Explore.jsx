@@ -8,7 +8,7 @@ const Explore = () => {
   }, []);
 
   return (
-    <div id="wrapper">
+    <div id="wrapper" >
       <div className="no-bottom no-top" id="content">
         <div id="top"></div>
 
@@ -30,7 +30,8 @@ const Explore = () => {
         </section>
 
         <section aria-label="section">
-          <div className="container">
+          <div className="container" data-aos="fade-up"
+     data-aos-easing="ease-in-sine">
             <div className="row">
               <ExploreItems />
             </div>

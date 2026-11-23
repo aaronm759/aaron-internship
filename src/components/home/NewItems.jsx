@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import ItemCards from "../ItemCards";
 
@@ -9,31 +8,11 @@ const NewItems = () => {
   const [error, setError] = useState(false);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
-  const [timers, setTimers] = useState([]);
   const carouselRef = useRef(null);
   
   
 
-  const initialTimers = (itemArray) =>{
-    const result = [];
-    for (const item of itemArray) {
-        
-        const timeRemaining = item.expiryDate - Date.now();
-        
-        if (timeRemaining > 0) {
-            
-            result.push({
-                id: item.id,
-                timeLeft: timeRemaining,
-            })
-        };
-    };
-   
-    
-    
-    
-    return result;
-  };
+  
 
   useEffect(() => {
     let active = true;
@@ -42,7 +21,7 @@ const NewItems = () => {
         const response = await axios.get("https://us-central1-nft-cloud-functions.cloudfunctions.net/newItems");
          const items = Array.isArray(response.data) ? response.data : [];
          setNewItems(items);
-         setTimers(initialTimers(items));
+        
       } catch (err) {
         console.error("Failed to fetch new items:", err);
         if (active) setError(true);

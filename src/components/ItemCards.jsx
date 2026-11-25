@@ -142,7 +142,7 @@ const ItemCards = (props) => {
                           </div>
                         </div>
       
-                        <Link to={`/item-details?nftId=${item.id}`}>
+                        <Link to={`/item-details?nftId=${item.nftId}`}>
                           <img
                             src={item.nftImage}
                             className="lazy nft__item_preview"
@@ -151,7 +151,7 @@ const ItemCards = (props) => {
                         </Link>
                       </div>
                       <div className="nft__item_info">
-                        <Link to={`/item-details?nftId=${item.id}`}>
+                        <Link to={`/item-details?nftId=${item.nftId}`}>
                           <h4>{item.title}</h4>
                         </Link>
                         <div className="nft__item_price">{item.price} ETH</div>

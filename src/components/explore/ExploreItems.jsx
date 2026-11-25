@@ -94,9 +94,11 @@ const ExploreItems = () => {
         </>
       )}
       <div className="col-md-12 text-center">
-        <Link to="" id="loadmore" className="btn-main lead" onClick={loadMore}>
-          Load more
-        </Link>
+        {items.length < 16 && (
+          <Link to="" id="loadmore" className="btn-main lead" onClick={loadMore}>
+            Load more
+          </Link>
+        )}
       </div>
     </>
   );

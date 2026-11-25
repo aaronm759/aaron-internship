@@ -38,7 +38,7 @@ const AuthorItems = (props) => {
                       </div>
                     </div>
                   </div>
-                  <Link to={`/item-details?nftId=${nft?.id}`}>
+                  <Link to={`/item-details?nftId=${nft?.nftId}`}>
                     <img
                       src={nft?.nftImage || nftImage}
                       className="lazy nft__item_preview"
@@ -47,7 +47,7 @@ const AuthorItems = (props) => {
                   </Link>
                 </div>
                 <div className="nft__item_info">
-                  <Link to={`/item-details?nftId=${nft?.id}`}>
+                  <Link to={`/item-details?nftId=${nft?.nftId}`}>
                     <h4>{nft?.title || "Pinky Ocean"}</h4>
                   </Link>
                   <div className="nft__item_price">{nft?.price || "2.52 ETH"}</div>

@@ -14,6 +14,10 @@ const Author = () => {
   const [loading, setLoading] = useState(true);
   const [subscribed, setSubscribed] = useState(false);
   const [followers, setFollowers] = useState(0);
+
+  useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   
   
 
